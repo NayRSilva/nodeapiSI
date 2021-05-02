@@ -25,6 +25,10 @@ db.Sequelize = Sequelize;
 db.sequelize = sequelize;
 
 db.user = require("../models/user.model.js")(sequelize, Sequelize);
+db.medicine = require("../models/medicine.model.js")(sequelize, Sequelize);
+
+db.user.hasMany(db.medicine);
+db.medicine.belongsTo(db.user);
 
 
 module.exports = db;
