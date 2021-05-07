@@ -13,5 +13,7 @@ module.exports = function(app){
     app.post("/api/medicine/new", controller.createMedicine)
 
     app.post("/api/medicine/:id", controller.updateMedicine)
+    app.get("/api/medicine/all", controller.readMedicines)
+
     
 }

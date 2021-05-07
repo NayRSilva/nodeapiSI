@@ -1,0 +1,23 @@
+{
+  "development": {
+    "username": "nay_db",
+    "password": "123",
+    "database": "sidb",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  },
+  "test": {
+    "username": "nay_db",
+    "password": "123",
+    "database": "sidb",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  },
+  "production": {
+    "username": "nay_db",
+    "password": "123",
+    "database": "sidb",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  }
+}

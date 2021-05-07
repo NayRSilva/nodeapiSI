@@ -6,6 +6,7 @@ exports.createMedicine = (req, res) =>{
         name: req.body.name,
         total: req.body.total,
         quantity: req.body.quantity,
+        time: req.body.time,
         refil: req.body.refil,
         userId: req.body.userId
     }).then(()=>{
@@ -16,7 +17,11 @@ exports.createMedicine = (req, res) =>{
 }
 
 exports.readMedicines = async (req, res) =>{
-    return await Medicine.findAll();
+    return await Medicine.findAll().then((data)=>{
+        res.send(data)
+    }).catch((error)=>{
+        res.status(500).send({message: error})
+    });
 }
 
 exports.updateMedicine = (req, res)=>{

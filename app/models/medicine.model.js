@@ -12,6 +12,9 @@ module.exports = (sequelize, Sequelize) => {
       time:{
           type: Sequelize.TIME
       },
+      interval:{
+        type: Sequelize.INTEGER
+      },
       refill:{
           type: Sequelize.BOOLEAN
       }
